@@ -5,8 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_wooden_cork_texture"
+    android:gravity="center"
     tools:context=".MainActivity"
     android:orientation="vertical">
+<!--    `vertical` = things are layered on top on each other-->
 
     <TextView
         android:layout_width="match_parent"
@@ -14,6 +16,7 @@
         android:text="Quiz App"
         android:textSize="30dp"
         android:textStyle="bold"
+        android:layout_marginBottom="30dp"
         android:gravity="center"
         android:textColor="@color/white"
         />
@@ -23,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
+        app:cardCornerRadius="20dp"
         android:background="@color/white">
 
         <LinearLayout
