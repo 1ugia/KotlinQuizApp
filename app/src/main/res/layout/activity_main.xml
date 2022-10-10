@@ -56,18 +56,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                />
-
+<!--         Where the text iput box is implemented for the users:  -->
             <androidx.appcompat.widget.AppCompatEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Name Here"
+                android:hint="e.g Mike"
                 android:inputType="textCapWords"
                 android:textColor="#363A43"
                 android:textColorHint="#7A8089"
                 />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/design_default_color_primary"
+                android:text="Start"
+                android:textColor="@color/white"
+                android:textSize="18dp">
+            </Button>
+
 
         </LinearLayout>
 
