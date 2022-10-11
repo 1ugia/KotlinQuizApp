@@ -64,6 +64,7 @@
 
 <!--         Where the text iput box is implemented for the users:  -->
             <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/EditText_name_field"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="e.g Mike"
