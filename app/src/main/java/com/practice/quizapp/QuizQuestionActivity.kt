@@ -8,4 +8,7 @@ class QuizQuestionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_question)
     }
+
+    val questionList = Constant.getQuestions()
+//    Log.i("questionsList size is ${questionList.size}")
 }

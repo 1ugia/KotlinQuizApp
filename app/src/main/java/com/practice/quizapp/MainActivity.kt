@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         val btnStart : Button = findViewById(R.id.btn_start)
         val editTextNameField : AppCompatEditText = findViewById(R.id.EditText_name_field)
         btnStart.setOnClickListener{
-            if(editTextNameField.text.isEmpty()){
+            if(editTextNameField.text?.isEmpty() == true){
                 Toast.makeText(
                     this,
                     "please enter your name",
