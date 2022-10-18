@@ -12,10 +12,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btnStart : Button = findViewById(R.id.btn_start)
-        val editTextNameField : AppCompatEditText = findViewById(R.id.EditText_name_field)
-        btnStart.setOnClickListener{
-            if(editTextNameField.text?.isEmpty() == true){
+        val btnStart: Button = findViewById(R.id.btn_start)
+        val editTextNameField: AppCompatEditText = findViewById(R.id.EditText_name_field)
+        btnStart.setOnClickListener {
+            if (editTextNameField.text?.isEmpty() == true) {
                 Toast.makeText(
                     this,
                     "please enter your name",
@@ -23,8 +23,8 @@ class MainActivity : AppCompatActivity() {
                 ).show()
             } else {
                 val intent = Intent(
-                this,
-                QuizQuestionActivity::class.java
+                    this,
+                    QuizQuestionActivity::class.java
                 )
                 startActivity(intent)
                 finish()

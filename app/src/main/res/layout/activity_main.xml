@@ -6,28 +6,27 @@
     android:layout_height="match_parent"
     android:background="@drawable/ic_wooden_cork_texture"
     android:gravity="center"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
-<!--    `vertical` = things are layered on top on each other-->
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!--    `vertical` = things are layered on top on each other-->
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Quiz App"
-        android:textSize="30dp"
-        android:textStyle="bold"
         android:layout_marginBottom="30dp"
         android:gravity="center"
+        android:text="Quiz App"
         android:textColor="@color/white"
-        />
+        android:textSize="30dp"
+        android:textStyle="bold" />
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        app:cardCornerRadius="20dp"
-        android:background="@color/white">
+        android:background="@color/white"
+        app:cardCornerRadius="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,40 +37,37 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Welcome"
-                android:textSize="25dp"
-                android:textStyle="bold"
                 android:gravity="center"
+                android:text="Welcome"
                 android:textColor="#363A43"
-                />
+                android:textSize="25dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Please Enter Your Name"
-                android:textSize="16dp"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textColor="#7A8089"
                 android:layout_marginTop="16dp"
-                />
+                android:gravity="center"
+                android:text="Please Enter Your Name"
+                android:textColor="#7A8089"
+                android:textSize="16dp"
+                android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                android:layout_marginTop="20dp">
 
-<!--         Where the text iput box is implemented for the users:  -->
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/EditText_name_field"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="e.g Mike"
-                android:inputType="textCapWords"
-                android:textColor="#363A43"
-                android:textColorHint="#7A8089"
-                />
+                <!--         Where the text iput box is implemented for the users:  -->
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/EditText_name_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="e.g Mike"
+                    android:inputType="textCapWords"
+                    android:textColor="#363A43"
+                    android:textColorHint="#7A8089" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -83,8 +79,7 @@
                 android:background="@color/design_default_color_primary"
                 android:text="Start"
                 android:textColor="@color/white"
-                android:textSize="18dp">
-            </Button>
+                android:textSize="18dp"></Button>
 
 
         </LinearLayout>

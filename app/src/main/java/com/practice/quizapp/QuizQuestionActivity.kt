@@ -1,4 +1,4 @@
- package com.practice.quizapp
+package com.practice.quizapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,5 +10,6 @@ class QuizQuestionActivity : AppCompatActivity() {
     }
 
     val questionList = Constant.getQuestions()
+//    val question1 = Question()
 //    Log.i("questionsList size is ${questionList.size}")
 }
