@@ -11,7 +11,7 @@ class QuizQuestionActivity : AppCompatActivity() {
 
     //        Importing IDs from the UI (xml) page
     private var progressBar : ProgressBar? = null
-    private var textViewProgress : TextView? = null
+    private var textViewProgressNumbers : TextView? = null
     private var textViewQuestion : TextView? = null
     private var imageViewImage : ImageView? = null
 
@@ -23,6 +23,17 @@ class QuizQuestionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_question)
+
+//        linking textView IDs with values on Kotlin to be able to manipulate
+        progressBar = findViewById(R.id.progressBar)
+        textViewProgressNumbers = findViewById(R.id.TextView_progressNumbers)
+        textViewQuestion = findViewById(R.id.textView_questions)
+        imageViewImage = findViewById(R.id.imageView_image)
+
+        textView_option1 = findViewById(R.id.textView_option1)
+        textView_option2 = findViewById(R.id.textView_option2)
+        textView_option3 = findViewById(R.id.textView_option3)
+        textView_option4 = findViewById(R.id.textView_option4)
 
 
         val questionList = Constant.getQuestions()
