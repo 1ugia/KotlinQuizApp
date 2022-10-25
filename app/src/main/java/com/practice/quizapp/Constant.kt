@@ -1,13 +1,19 @@
 package com.practice.quizapp
 
-import androidx.appcompat.widget.SearchView.OnQueryTextListener
-
 object Constant {
+    val optionList = listOf(
+        "Dragon Ball",
+        "Dragon Ball Z",
+        "Attack on Titan",
+        "One Piece",
+        "Diego",
+    )
+
     fun getQuestions(): ArrayList<Question> {
         val questionList = ArrayList<Question>()
 
         val quest1 = Question(id = 1,
-            "what anime is this from?",
+            "What anime is this from?",
             R.drawable.ic_lufy,
             "Dragon Ball",
             "Dragon Ball Z",
@@ -18,7 +24,7 @@ object Constant {
 
 
         val quest2 = Question(id = 2,
-            "what anime is this from?",
+            "What anime is this from?",
             R.drawable.ic_naruto,
             "Naruto",
             "Dragon Ball",
@@ -28,7 +34,7 @@ object Constant {
         questionList.add(quest2)
 
         val quest3 = Question(id = 3,
-            "what anime is this from?",
+            "What anime is this from?",
             R.drawable.ic_ryuku,
             "Attack on Titan",
             "Death note",
@@ -38,7 +44,7 @@ object Constant {
         questionList.add(quest3)
 
         val quest4 = Question(id = 4,
-            "what anime is this from?",
+            "What anime is this from?",
             R.drawable.ic_goku,
             "Dragon Ball",
             "Death note",
