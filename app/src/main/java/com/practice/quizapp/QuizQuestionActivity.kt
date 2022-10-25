@@ -3,11 +3,13 @@ package com.practice.quizapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import androidx.core.view.setPadding
 
 class QuizQuestionActivity : AppCompatActivity() {
 
@@ -36,26 +38,20 @@ class QuizQuestionActivity : AppCompatActivity() {
         answerOptionsLayout = findViewById(R.id.answer_options)
 
 
-//        textView_option1 = findViewById(R.id.textView_option1)
-//        textView_option2 = findViewById(R.id.textView_option2)
-//        textView_option3 = findViewById(R.id.textView_option3)
-//        textView_option4 = findViewById(R.id.textView_option4)
-
-
-        val questionList = Constant.getQuestions()
-        val optionList = Constant.optionList
+        val questions = Constant.getQuestions()
+        val questionNumber1 = questions.first()
 
 //    val question1 = Question()
-        Log.i("questionsList size is", "${questionList.size}")
-        for (item in questionList) {
+        Log.i("questionsList size is", "${questionNumber1.options.size}")
+        for (item in questionNumber1.options) {
 //            for every object in the question data class
-            Log.e("questions", item.questions)
+            Log.e("answer option", item)
 
 //            log "questions" and the strings within the Question class data ('i'),
 //            `.questions` is what we names the the string to ask users the questions.
         }
 
-        for (itemFromTheList in optionList) {
+        for (itemFromTheList in questionNumber1.options) {
             val textOption = TextView(this) //empty TextView
             textOption.text = itemFromTheList //
             textOption.background = ContextCompat.getDrawable(this, R.drawable.default_option_border)
@@ -66,15 +62,24 @@ class QuizQuestionActivity : AppCompatActivity() {
 
             you are creating TextView from xml in here like Compose.
              */
+            textOption.setPadding(50)
+            textOption.gravity = Gravity.CENTER
+            val attributes  = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+            // getting access to LinearLayout attributes ^^ (getting items for the recipe)
+            // Setting the attributes v (getting only specific ingredients from recipe
+            attributes.setMargins(10, 30, 10, 30)
+
+            textOption.layoutParams = attributes
             answerOptionsLayout?.addView(textOption)
         }
 
         // DON'T UNDERSTAND WHY WE ARE ALIGNING IT AGAIN WHEN WE'VE FOUND THE ID.
         val currentPosition = 1
-        val questionClass: Question = questionList[0]
+        val questionClass: Question = questions.first()
         progressBar?.progress = currentPosition // WHY IS IT NOT THE OTHER WAY ROUND??
-        textViewProgressNumbers?.text = "$currentPosition/${progressBar?.max}"
-        textViewQuestion?.text = questionClass.questions
+        progressBar?.max = questions.size
+        textViewProgressNumbers?.text = "$currentPosition/${questions.size}"
+        textViewQuestion?.text = questionClass.question
 //        textOption?.text = questionClass.questions
         imageViewImage?.setImageResource(questionClass.image)
 

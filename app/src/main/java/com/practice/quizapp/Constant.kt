@@ -1,24 +1,16 @@
 package com.practice.quizapp
 
 object Constant {
-    val optionList = listOf(
-        "Dragon Ball",
-        "Dragon Ball Z",
-        "Attack on Titan",
-        "One Piece",
-        "Diego",
-    )
-
     fun getQuestions(): ArrayList<Question> {
         val questionList = ArrayList<Question>()
 
         val quest1 = Question(id = 1,
             "What anime is this from?",
             R.drawable.ic_lufy,
-            "Dragon Ball",
+            listOf("Dragon Ball",
             "Dragon Ball Z",
             "Attack on Titan",
-            "One Piece",
+            "One Piece"),
             4)
         questionList.add(quest1)
 
@@ -26,30 +18,30 @@ object Constant {
         val quest2 = Question(id = 2,
             "What anime is this from?",
             R.drawable.ic_naruto,
-            "Naruto",
+            listOf("Naruto",
             "Dragon Ball",
             "Dragon Ball Z",
-            "Hunter X Hunter",
+            "Hunter X Hunter"),
             1)
         questionList.add(quest2)
 
         val quest3 = Question(id = 3,
             "What anime is this from?",
             R.drawable.ic_ryuku,
-            "Attack on Titan",
+            listOf("Attack on Titan",
             "Death note",
             "Dragon Ball Z",
-            "Demon Slayer",
+            "Demon Slayer"),
             2)
         questionList.add(quest3)
 
         val quest4 = Question(id = 4,
             "What anime is this from?",
             R.drawable.ic_goku,
-            "Dragon Ball",
+            listOf("Dragon Ball",
             "Death note",
             "Dragon Ball Z",
-            "Hunter X Hunter",
+            "Hunter X Hunter"),
             1)
         questionList.add(quest4)
 
