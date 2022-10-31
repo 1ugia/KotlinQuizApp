@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Gravity
+import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.ProgressBar
@@ -11,7 +12,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.view.setPadding
 
-class QuizQuestionActivity : AppCompatActivity() {
+class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
 
     //        Importing IDs from the UI (xml) page
     private var progressBar: ProgressBar? = null
@@ -59,11 +60,11 @@ class QuizQuestionActivity : AppCompatActivity() {
             - `ContextCompat` is the oven to bring (to bake) the "recipe"
             - (which is the `default_option_border` xml page) into
             - cake (which, in this case is when you run the app - APK)
-
             you are creating TextView from xml in here like Compose.
              */
             textOption.setPadding(50)
             textOption.gravity = Gravity.CENTER
+            // setting gravity on single TextView objects as we want to have control over the texts, not the entire LinearLayout
             val attributes  = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
             // getting access to LinearLayout attributes ^^ (getting items for the recipe)
             // Setting the attributes v (getting only specific ingredients from recipe
@@ -89,5 +90,9 @@ class QuizQuestionActivity : AppCompatActivity() {
 ////        textView_option3?.text = questionClass.option3
 ////        textView_option4?.text = questionClass.option4
 
+    }
+
+    override fun onClick(p0: View?) {
+        TODO("Not yet implemented")
     }
 }
